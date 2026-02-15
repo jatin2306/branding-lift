@@ -1,0 +1,24 @@
+.content-section {
+  padding: var(--space-16) var(--space-6);
+  background-color: var(--color-bg);
+  transition: background var(--transition);
+}
+
+.content-section__inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.content-section:nth-of-type(even) {
+  background-color: var(--color-bg-soft);
+}
+
+.content-section:nth-of-type(even) .content-section__inner {
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .content-section {
+    padding: var(--space-12) var(--space-4);
+  }
+}

@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app main {
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Services grid – card-style items */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.services-grid__item {
+  padding: var(--space-6);
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  transition: border-color var(--transition), box-shadow var(--transition-smooth), transform var(--transition);
+}
+
+.services-grid__item:hover {
+  border-color: rgba(13, 79, 92, 0.2);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.services-grid__item h3 {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+  line-height: var(--leading-tight);
+}
+
+.services-grid__item p {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-muted);
+}
+
+/* Contact block */
+.contact-block {
+  text-align: center;
+  margin-top: var(--space-6);
+  padding: var(--space-6);
+  background: var(--color-primary-soft);
+  border-radius: var(--radius-lg);
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-block p {
+  margin: var(--space-2) 0;
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+}
+
+.contact-block a {
+  color: var(--color-primary);
+  font-weight: 600;
+  transition: color var(--transition), text-decoration-color var(--transition);
+}
+
+.contact-block a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-block a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
