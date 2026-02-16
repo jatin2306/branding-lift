@@ -43,10 +43,10 @@ function App() {
         <ContentSection id="contact" title="Get in touch" subtitle="Ready to lift your brand? Say hello.">
           <div className="contact-block">
             <p>
-              <a href="mailto:hello@brandinglift.com">hello@brandinglift.com</a>
+              <a href="mailto:arham@brandinglift.com">arham@brandinglift.com</a>
             </p>
             <p>
-              <a href="tel:+12345678900">+1 234 567 8900</a>
+              <a href="tel:+91 9717882400">+91 9717882400</a>
             </p>
           </div>
         </ContentSection>

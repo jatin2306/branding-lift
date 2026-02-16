@@ -28,10 +28,7 @@ function TopBar() {
             <IconEmail className="topbar__icon" />
             {contact.email}
           </a>
-          <a href={`tel:${contact.phone.replace(/\s/g, '')}`} className="topbar__link">
-            <IconPhone className="topbar__icon" />
-            {contact.phone} ({contact.phoneLabel})
-          </a>
+        
           {contact.phone2 && (
             <a href={`tel:${contact.phone2.replace(/\s/g, '')}`} className="topbar__link">
               <IconPhone className="topbar__icon" />
@@ -41,7 +38,7 @@ function TopBar() {
         </div>
         <div className="topbar__social">
           <span className="topbar__follow">Follow us:</span>
-          {social.map((item) => {
+          {social?.map((item) => {
             const Icon = socialIcons[item.icon];
             return Icon ? (
               <a

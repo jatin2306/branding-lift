@@ -7,10 +7,8 @@ export const siteConfig = {
     tagline: 'Brand that lifts',
   },
   contact: {
-    email: 'hello@brandinglift.com',
-    phone: '+1 234 567 8900',
-    phoneLabel: 'USA',
-    phone2: '+91 8800278502',
+    email: 'arham@brandinglift.com',
+    phone2: '+91 9717882400',
     phone2Label: 'India',
   },
   social: [
@@ -36,7 +34,7 @@ export const siteConfig = {
     tags: ['Brand Strategy', 'Design', 'Digital'],
   },
   whatsapp: {
-    number: '1234567890',
+    number: '+91 9717882400',
     message: 'Hi, I\'d like to know more about brandinglift.',
   },
 };
