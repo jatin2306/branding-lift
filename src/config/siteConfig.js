@@ -14,7 +14,7 @@ export const siteConfig = {
   social: [
     { label: 'Facebook', url: '#', icon: 'facebook' },
     { label: 'Twitter', url: '#', icon: 'twitter' },
-    { label: 'LinkedIn', url: '#', icon: 'linkedin' },
+    { label: 'LinkedIn', url: 'https://www.linkedin.com/company/brandinglift/posts/?feedView=all', icon: 'linkedin' },
     { label: 'Instagram', url: '#', icon: 'instagram' },
   ],
   nav: [

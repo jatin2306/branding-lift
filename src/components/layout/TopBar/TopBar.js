@@ -2,7 +2,6 @@ import React from 'react';
 import { siteConfig } from '../../../config/siteConfig';
 import {
   IconEmail,
-  IconPhone,
   IconFacebook,
   IconTwitter,
   IconLinkedIn,
@@ -29,12 +28,12 @@ function TopBar() {
             {contact.email}
           </a>
         
-          {contact.phone2 && (
+          {/* {contact.phone2 && (
             <a href={`tel:${contact.phone2.replace(/\s/g, '')}`} className="topbar__link">
               <IconPhone className="topbar__icon" />
               {contact.phone2} ({contact.phone2Label})
             </a>
-          )}
+          )} */}
         </div>
         <div className="topbar__social">
           <span className="topbar__follow">Follow us:</span>
