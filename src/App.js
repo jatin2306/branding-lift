@@ -3,6 +3,7 @@ import Header from './components/layout/Header/Header';
 import HeroSection from './components/hero/HeroSection/HeroSection';
 import ContentSection from './components/sections/ContentSection/ContentSection';
 import AboutBlock from './components/sections/AboutBlock/AboutBlock';
+import ContactForm from './components/sections/ContactForm/ContactForm';
 import Footer from './components/layout/Footer/Footer';
 import FloatingWhatsApp from './components/ui/FloatingWhatsApp/FloatingWhatsApp';
 import './App.css';
@@ -42,14 +43,7 @@ function App() {
           </div>
         </ContentSection>
         <ContentSection id="contact" title="Get in touch" subtitle="Ready to lift your brand? Say hello.">
-          <div className="contact-block">
-            <p>
-              <a href="mailto:arham@brandinglift.com">arham@brandinglift.com</a>
-            </p>
-            <p>
-              <a href="tel:+91 9717882400">+91 9717882400</a>
-            </p>
-          </div>
+          <ContactForm />
         </ContentSection>
       </main>
       <Footer />

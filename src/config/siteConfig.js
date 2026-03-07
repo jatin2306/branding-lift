@@ -20,6 +20,7 @@ export const siteConfig = {
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
     { label: 'Services', href: '#services' },
+    { label: 'City', href: '#city' },
     { label: 'Work', href: '#work' },
     { label: 'Contact', href: '#contact' },
   ],
@@ -36,4 +37,15 @@ export const siteConfig = {
     number: '+91 9717882400',
     message: 'Hi, I\'d like to know more about brandinglift.',
   },
+  cities: [
+    'Mumbai',
+    'Delhi',
+    'Bangalore',
+    'Hyderabad',
+    'Chennai',
+    'Kolkata',
+    'Pune',
+    'Ahmedabad',
+    'Other',
+  ],
 };
