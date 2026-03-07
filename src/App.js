@@ -3,6 +3,7 @@ import Header from './components/layout/Header/Header';
 import HeroSection from './components/hero/HeroSection/HeroSection';
 import ContentSection from './components/sections/ContentSection/ContentSection';
 import AboutBlock from './components/sections/AboutBlock/AboutBlock';
+import Footer from './components/layout/Footer/Footer';
 import FloatingWhatsApp from './components/ui/FloatingWhatsApp/FloatingWhatsApp';
 import './App.css';
 
@@ -51,6 +52,7 @@ function App() {
           </div>
         </ContentSection>
       </main>
+      <Footer />
       <FloatingWhatsApp />
     </div>
   );

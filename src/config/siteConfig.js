@@ -12,10 +12,9 @@ export const siteConfig = {
     phone2Label: 'India',
   },
   social: [
-    { label: 'Facebook', url: '#', icon: 'facebook' },
-    { label: 'Twitter', url: '#', icon: 'twitter' },
+    { label: 'Facebook', url: 'https://www.facebook.com/share/1FYxuW5mZJ/?mibextid=wwXIfr', icon: 'facebook' },
+    { label: 'Instagram', url: 'https://www.instagram.com/brandinglift_?igsh=bDZ6d3d2M2JvaHp3&utm_source=qr', icon: 'instagram' },
     { label: 'LinkedIn', url: 'https://www.linkedin.com/company/brandinglift/posts/?feedView=all', icon: 'linkedin' },
-    { label: 'Instagram', url: '#', icon: 'instagram' },
   ],
   nav: [
     { label: 'Home', href: '#home' },
