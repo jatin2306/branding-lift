@@ -1,6 +1,6 @@
 .topbar {
   background-color: var(--color-topbar);
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--color-text);
   font-size: var(--text-sm);
   min-height: var(--header-top-height);
 }
@@ -34,11 +34,11 @@
 
 .topbar__link:hover {
   opacity: 1;
-  color: #fff;
+  color: var(--color-primary);
 }
 
 .topbar__link:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -72,12 +72,12 @@
 }
 
 .topbar__social-link:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(124, 107, 158, 0.2);
   transform: translateY(-1px);
 }
 
 .topbar__social-link:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 

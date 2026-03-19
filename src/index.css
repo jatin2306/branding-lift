@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Colors */
-  --color-primary: #0d4f5c;
-  --color-primary-light: #0f6272;
-  --color-primary-soft: rgba(13, 79, 92, 0.08);
-  --color-topbar: #0e5c6b;
+  /* Colors – light lavender theme */
+  --color-primary: #7c6b9e;
+  --color-primary-light: #9b8bb5;
+  --color-primary-soft: rgba(124, 107, 158, 0.12);
+  --color-topbar: #c4b5d4;
   --color-bg: #ffffff;
-  --color-bg-soft: #f8fafa;
+  --color-bg-soft: #f8f6fb;
   --color-text: #1a1a1a;
   --color-text-muted: #5a5a5a;
-  --color-border: #e8e8e8;
+  --color-border: #e8e6ec;
   --color-border-soft: rgba(0, 0, 0, 0.06);
 
   /* Typography */
@@ -54,7 +54,7 @@
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
   --shadow-xl: 0 12px 40px rgba(0, 0, 0, 0.1);
-  --shadow-primary: 0 4px 14px rgba(13, 79, 92, 0.25);
+  --shadow-primary: 0 4px 14px rgba(124, 107, 158, 0.25);
 
   /* Motion */
   --transition: 0.2s ease;

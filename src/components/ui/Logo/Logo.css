@@ -1,10 +1,12 @@
 .logo {
   display: inline-flex;
   align-items: center;
+  justify-content: flex-start;
   gap: var(--space-2);
   font-weight: 700;
   color: var(--color-text);
   transition: color var(--transition);
+  line-height: 0;
 }
 
 .logo:hover {
@@ -23,7 +25,7 @@
   justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
-  background: linear-gradient(135deg, #0d4f5c 0%, #1a8fa3 50%, #0f6272 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 50%, var(--color-primary) 100%);
   color: #fff;
   font-size: var(--text-xs);
   font-weight: 700;
@@ -36,23 +38,31 @@
 
 .logo__img {
   display: block;
-  height: 3.25rem;
-  min-height: 48px;
+  height: 5.5rem;
+  min-height: 72px;
   width: auto;
-  max-width: 220px;
+  max-width: 340px;
   object-fit: contain;
+  object-position: left center;
+  vertical-align: middle;
   flex-shrink: 0;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.12)) drop-shadow(0 1px 4px rgba(0, 0, 0, 0.08));
+  opacity: 1;
+  transition: filter var(--transition);
+}
+
+.logo:hover .logo__img {
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.16)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.1));
 }
 
 .logo--compact .logo__img {
-  height: 3rem;
-  min-height: 44px;
-  max-width: 180px;
+  height: 4.5rem;
+  min-height: 56px;
+  max-width: 260px;
 }
 
 .logo:hover .logo__mark {
-  box-shadow: 0 6px 16px rgba(13, 79, 92, 0.35);
+  box-shadow: 0 6px 16px rgba(124, 107, 158, 0.4);
   transform: scale(1.02);
 }
 

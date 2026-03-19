@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { siteConfig } from '../../../config/siteConfig';
 import './Logo.css';
 
-const logoUrl = process.env.PUBLIC_URL + '/logo.png';
+const logoUrl = process.env.PUBLIC_URL + '/image.png';
 
 function Logo({ href = '#home', compact, twoLine }) {
   const [imgError, setImgError] = useState(false);
@@ -14,7 +14,7 @@ function Logo({ href = '#home', compact, twoLine }) {
       {!imgError && (
         <img
           src={logoUrl}
-          alt=""
+          alt={brand.name}
           className="logo__img"
           onError={() => setImgError(true)}
         />
