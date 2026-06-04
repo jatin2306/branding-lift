@@ -1,0 +1,10 @@
+.blog-preview__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-10);
+}
+
+.blog-preview__view-all {
+  border-radius: var(--radius-full);
+  padding: var(--space-3) var(--space-8);
+}

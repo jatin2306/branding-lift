@@ -1,0 +1,22 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: box-shadow var(--transition-smooth), border-color var(--transition-smooth), background var(--transition-smooth);
+}
+
+.header--scrolled {
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom-color: var(--color-border);
+  box-shadow: 0 4px 24px rgba(124, 107, 158, 0.1), 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+@media (max-width: 768px) {
+  .header--scrolled {
+    box-shadow: 0 2px 16px rgba(124, 107, 158, 0.12);
+  }
+}
