@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import { siteConfig } from "@/config/siteConfig";
 import "./globals.css";
 
@@ -21,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${outfit.variable} h-full`}>
-      <body className="min-h-full antialiased">{children}</body>
+      <body className="min-h-full antialiased">
+        <GoogleAnalytics />
+        {children}
+      </body>
     </html>
   );
 }

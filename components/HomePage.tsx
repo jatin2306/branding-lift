@@ -32,8 +32,8 @@ export default function HomePage() {
         <HeroSection />
         <ContentSection
           id="about"
-          title="Strategy, design & digital that lifts your brand"
-          subtitle="We help you stand out with a clear identity, strong presence, and campaigns that convert."
+          title="About BrandingLift"
+          subtitle="Empowering businesses through technology, creativity, and digital growth."
           headingAlign="center"
         >
           <AboutBlock />
