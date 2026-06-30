@@ -98,13 +98,17 @@
 .services-grid__visual {
   position: relative;
   aspect-ratio: 16 / 9;
+  min-height: 180px;
   overflow: hidden;
   background: linear-gradient(135deg, var(--color-primary-soft), var(--color-bg-soft));
 }
 
 .services-grid__image {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
+  max-width: none;
   object-fit: cover;
   transition: transform 0.45s ease;
 }

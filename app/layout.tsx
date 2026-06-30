@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Outfit } from "next/font/google";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import GoogleAnalyticsPageView from "@/components/analytics/GoogleAnalyticsPageView";
 import { siteConfig } from "@/config/siteConfig";
 import "./globals.css";
 
@@ -22,8 +24,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${outfit.variable} h-full`}>
-      <body className="min-h-full antialiased">
+      <head>
         <GoogleAnalytics />
+      </head>
+      <body className="min-h-full antialiased">
+        <Suspense fallback={null}>
+          <GoogleAnalyticsPageView />
+        </Suspense>
         {children}
       </body>
     </html>

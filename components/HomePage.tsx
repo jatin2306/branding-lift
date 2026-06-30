@@ -11,6 +11,7 @@ import BlogPreview from '@/components/sections/BlogPreview/BlogPreview';
 import Link from 'next/link';
 import Footer from '@/components/layout/Footer/Footer';
 import FloatingWhatsApp from '@/components/ui/FloatingWhatsApp/FloatingWhatsApp';
+import RemoteImage from '@/components/ui/RemoteImage/RemoteImage';
 import { ServiceIcon } from '@/components/ui/Icons/Icons';
 import './home.css';
 
@@ -66,13 +67,11 @@ export default function HomePage() {
                         style={{ '--card-accent': accent } as CSSProperties}
                       >
                         <div className="services-grid__visual">
-                          {service.image && (
-                            <img
-                              src={service.image}
-                              alt=""
-                              className="services-grid__image"
-                            />
-                          )}
+                          <RemoteImage
+                            src={service.image}
+                            alt={service.name}
+                            className="services-grid__image"
+                          />
                           <div className="services-grid__visual-overlay" aria-hidden />
                           <span className="services-grid__icon-wrap">
                             <ServiceIcon type={service.icon || 'web'} className="services-grid__icon" />

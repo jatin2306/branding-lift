@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { getServiceHelpPoints } from '@/config/siteConfig';
 import { ServiceIcon } from '@/components/ui/Icons/Icons';
+import RemoteImage from '@/components/ui/RemoteImage/RemoteImage';
 import Button from '@/components/ui/Button/Button';
 import './ServiceDetailPage.css';
 
@@ -10,54 +11,71 @@ export default function ServiceDetailPage({ service }) {
 
   return (
     <article className="service-page">
-      <div className="service-page__hero">
-        <div className="service-page__hero-inner">
+      <header className="service-page__header">
+        <div className="service-page__container">
           <Link href="/#services" className="service-page__back">
-            ← Back to services
+            <span className="service-page__back-icon" aria-hidden>←</span>
+            Back to services
           </Link>
-          <div className="service-page__hero-meta">
-            <span className="service-page__icon-wrap">
-              <ServiceIcon type={icon || 'web'} className="service-page__icon" />
-            </span>
-            <span className="service-page__category">{categoryLabel}</span>
+
+          <div className="service-page__header-grid">
+            <div className="service-page__intro">
+              <div className="service-page__meta">
+                <span className="service-page__icon-wrap">
+                  <ServiceIcon type={icon || 'web'} className="service-page__icon" />
+                </span>
+                <span className="service-page__category">{categoryLabel}</span>
+              </div>
+              <h1 className="service-page__title">{name}</h1>
+              <p className="service-page__lead">{description}</p>
+            </div>
+
+            <div className="service-page__visual">
+              <RemoteImage src={image} alt={name} className="service-page__image" loading="eager" />
+              <div className="service-page__visual-overlay" aria-hidden />
+            </div>
           </div>
-          <h1 className="service-page__title">{name}</h1>
         </div>
-      </div>
+      </header>
 
-      <div className="service-page__media-wrap">
-        <img src={image} alt="" className="service-page__image" />
-      </div>
-
-      <div className="service-page__content">
-        <section className="service-page__section">
-          <h2 className="service-page__section-title">About this service</h2>
-          <p className="service-page__overview">{description}</p>
-        </section>
-
-        <section className="service-page__section service-page__section--help">
-          <h2 className="service-page__section-title">How BrandingLift helps</h2>
-          <p className="service-page__section-lead">
-            We partner with you end-to-end—strategy through execution—so you get results, not just deliverables.
-          </p>
-          <ul className="service-page__help-list">
-            {helpPoints.map((point, i) => (
-              <li key={i} className="service-page__help-item">
-                <span className="service-page__help-mark" aria-hidden />
-                <span>{point}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <div className="service-page__cta">
-          <p className="service-page__cta-text">
-            Ready to get started with {name}? Let&apos;s talk about your project.
-          </p>
-          <Button href="/contact" variant="primary" className="service-page__cta-btn">
-            Contact us
-          </Button>
+      <div className="service-page__container service-page__layout">
+        <div className="service-page__main">
+          <section className="service-page__card service-page__card--help">
+            <div className="service-page__card-head">
+              <h2 className="service-page__section-title">How BrandingLift helps</h2>
+              <p className="service-page__section-lead">
+                We partner with you end-to-end—strategy through execution—so you get results, not just deliverables.
+              </p>
+            </div>
+            <ol className="service-page__help-list">
+              {helpPoints.map((point, i) => (
+                <li key={i} className="service-page__help-item">
+                  <span className="service-page__help-num" aria-hidden>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <p className="service-page__help-text">{point}</p>
+                </li>
+              ))}
+            </ol>
+          </section>
         </div>
+
+        <aside className="service-page__aside">
+          <div className="service-page__sticky">
+            <div className="service-page__cta">
+              <span className="service-page__cta-label">Get started</span>
+              <p className="service-page__cta-text">
+                Ready to move forward with {name}? Tell us about your goals and we&apos;ll reply within one business day.
+              </p>
+              <Button href="/contact" variant="primary">
+                Contact us
+              </Button>
+              <Link href="/#services" className="service-page__cta-link">
+                Browse all services
+              </Link>
+            </div>
+          </div>
+        </aside>
       </div>
     </article>
   );
