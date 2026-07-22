@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { siteConfig, serviceSlug } from '../../../config/siteConfig';
 import Logo from '../../ui/Logo/Logo';
-import Button from '../../ui/Button/Button';
+import Button from '../../../shared/ui/Button';
 import { ServiceIcon, IconSearch, IconChevronDown } from '../../ui/Icons/Icons';
 import './NavBar.css';
 
@@ -135,7 +135,7 @@ function NavBar() {
                 autoComplete="off"
                 aria-label="Search"
               />
-              <span className="navbar__search-kbd">⌘K</span>
+              <span className="navbar__search-kbd">Ã¢Å’ËœK</span>
             </label>
           </div>
           <div className="navbar__actions">

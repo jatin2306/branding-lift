@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { siteConfig } from '../../../config/siteConfig';
+import { siteConfig } from '../../../../config/siteConfig';
 import './HeroSection.css';
 
 const SLIDER_IMAGES = [

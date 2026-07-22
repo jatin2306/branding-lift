@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { siteConfig } from '../../../config/siteConfig';
-import Button from '../../ui/Button/Button';
+import { siteConfig } from '../../../../config/siteConfig';
+import Button from '../../../../shared/ui/Button';
 import './ContactForm.css';
 
 const CITY_PLACEHOLDER = 'Select City';

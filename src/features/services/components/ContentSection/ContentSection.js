@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionHeading from '../SectionHeading/SectionHeading';
+import SectionHeading from '../../../../shared/ui/SectionHeading';
 import './ContentSection.css';
 
 function ContentSection({
