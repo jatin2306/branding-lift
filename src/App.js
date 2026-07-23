@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { siteConfig, getServiceBySlug, serviceSlug } from './config/siteConfig';
-import Header from './components/layout/Header/Header';
-import HeroSection from './components/hero/HeroSection/HeroSection';
-import ContentSection from './components/sections/ContentSection/ContentSection';
-import AboutBlock from './components/sections/AboutBlock/AboutBlock';
-import ServiceDetail from './components/sections/ServiceDetail/ServiceDetail';
-import ContactForm from './components/sections/ContactForm/ContactForm';
-import Footer from './components/layout/Footer/Footer';
-import FloatingWhatsApp from './components/ui/FloatingWhatsApp/FloatingWhatsApp';
-import { ServiceIcon } from './components/ui/Icons/Icons';
+import Header from './shared/layout/Header';
+import HeroSection from './features/hero/components/HeroSection';
+import ContentSection from './features/services/components/ContentSection';
+import AboutBlock from './features/about/components/AboutBlock';
+import ServiceDetail from './features/services/components/ServiceDetail';
+import ContactForm from './features/contact/components/ContactForm';
+import Footer from './shared/layout/Footer';
+import FloatingWhatsApp from './shared/ui/FloatingWhatsApp';
+import { ServiceIcon } from './shared/ui/Icons';
 import './App.css';
 
 function App() {
