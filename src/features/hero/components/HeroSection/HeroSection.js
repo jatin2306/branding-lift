@@ -30,10 +30,6 @@ function HeroSection() {
 
   return (
     <section id="home" className="hero">
-      <span className="hero-dot hero-dot--1" aria-hidden />
-      <span className="hero-dot hero-dot--2" aria-hidden />
-      <span className="hero-dot hero-dot--3" aria-hidden />
-
       <div className="hero-container">
         {/* Left Content */}
         <div className="hero-left">
@@ -45,31 +41,28 @@ function HeroSection() {
             <br />
             {hero.titleLine2}
           </h1>
-          <span className="hero-underline" aria-hidden />
 
           <p className="hero-subtitle">{hero.subtitle}</p>
 
-          {/* CTA BUTTONS */}
-          <div className="hero-cta-group">
-            <a href="#services" className="hero-cta hero-cta--primary">
-              <span>Explore Solutions</span>
-              <svg className="hero-cta-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
+          {/* CTA BUTTON */}
+          <div className="hero-cta-container">
+            <a href="#services" className="hero-cta-btn">
+              <span className="hero-cta-shine" aria-hidden />
+              <span className="hero-cta-text">Explore Solutions</span>
+              <svg className="hero-cta-icon" viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
-            </a>
-            <a href="#contact" className="hero-cta hero-cta--secondary">
-              Get Free Consultation
             </a>
           </div>
 
+          {/* FEATURES — icon box above label, 3-column grid */}
           <div className="hero-features">
             {hero.features.map((f) => (
               <div className="hero-feature" key={f.label}>
-                <span className={`hero-feature-icon hero-feature-icon--${f.color}`}>
-                  <ServiceIcon type={f.icon} />
+                <span className="hero-feature-icon-wrap">
+                  <ServiceIcon type={f.icon} className="hero-feature-icon" />
                 </span>
-                <span>{f.label}</span>
+                <span className="hero-feature-label">{f.label}</span>
               </div>
             ))}
           </div>
@@ -78,7 +71,7 @@ function HeroSection() {
         {/* Right Stage */}
         <div className="hero-right">
           <div className="hero-stage">
-            
+
             {/* Floating cluster badges section */}
             <div className="cluster" aria-hidden>
               <svg className="cluster-lines" viewBox="0 0 600 220">
@@ -180,12 +173,11 @@ function HeroSection() {
 
                 <div className="laptop__hinge" aria-hidden />
 
-                {/* REALISTIC KEYBOARD IMAGE BASE */}
                 <div className="laptop__base" aria-hidden>
-                  <img 
-                    src="/keyboard-base.png" 
-                    alt="Laptop Keyboard Base" 
-                    className="laptop__base-img" 
+                  <img
+                    src="/keyboard-base.png"
+                    alt="Laptop Keyboard Base"
+                    className="laptop__base-img"
                   />
                 </div>
               </div>
