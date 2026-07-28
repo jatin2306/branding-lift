@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import SiteShell from '@/shared/layout/SiteShell/SiteShell';
-import ContactSection from '@/shared/ui/ContactSection/ContactSection';
+import ContactSection from '@/features/contact/components/ContactSection/ContactSection';
 import { siteConfig } from '@/lib/config/siteConfig';
 
 export const metadata: Metadata = {
