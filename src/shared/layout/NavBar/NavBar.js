@@ -1,0 +1,177 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+import { siteConfig, serviceSlug } from '@/lib/config/siteConfig';
+import Logo from '@/shared/ui/Logo/Logo';
+import Button from '@/shared/ui/Button/Button';
+import NavLink from '@/shared/ui/NavLink/NavLink';
+import { ServiceIcon, IconSearch, IconChevronDown } from '@/shared/ui/Icons/Icons';
+import './NavBar.css';
+
+function isNavActive(item, activeSection, pathname) {
+  if (item.href === '/contact' && pathname === '/contact') return true;
+  if (item.label === 'Services' && pathname.startsWith('/services')) return true;
+  if (item.label === 'Blogs' && pathname.startsWith('/blogs')) return true;
+  if (item.href.startsWith('#') && pathname === '/') {
+    return activeSection === item.href.slice(1);
+  }
+  return false;
+}
+
+function NavBar({ scrolled: headerScrolled = false }) {
+  const pathname = usePathname();
+  const isHome = pathname === '/';
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+  const { nav, cta, serviceCategories } = siteConfig;
+
+  useEffect(() => {
+    if (menuOpen) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = '';
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 16);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    if (!isHome) return undefined;
+
+    const sectionIds = ['home', 'about', 'services', 'blogs', 'contact'];
+    const getActive = () => {
+      const y = window.scrollY + 120;
+      for (let i = sectionIds.length - 1; i >= 0; i--) {
+        const el = document.getElementById(sectionIds[i]);
+        if (el && el.offsetTop <= y) return sectionIds[i];
+      }
+      return 'home';
+    };
+    setActiveSection(getActive());
+    const onScroll = () => setActiveSection(getActive());
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [isHome]);
+
+  const logoHref = isHome ? '#home' : '/';
+  const contactHref = cta.primaryHref || '/contact';
+
+  const isScrolled = scrolled || headerScrolled;
+
+  return (
+    <nav
+      className={`navbar ${menuOpen ? 'navbar--menu-open' : ''} ${isScrolled ? 'navbar--scrolled' : ''}`}
+      role="navigation"
+    >
+      <div className="navbar__inner">
+        <div className="navbar__logo-wrap">
+          <Logo href={logoHref} />
+        </div>
+
+        <button
+          type="button"
+          className="navbar__toggle"
+          aria-expanded={menuOpen}
+          aria-controls="navbar-menu"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span className="navbar__toggle-bar" aria-hidden />
+          <span className="navbar__toggle-bar" aria-hidden />
+          <span className="navbar__toggle-bar" aria-hidden />
+        </button>
+
+        <div id="navbar-menu" className={`navbar__menu ${menuOpen ? 'navbar__menu--open' : ''}`}>
+          <div className="navbar__links-wrap">
+            <ul className="navbar__links">
+              {nav.map((item) =>
+                item.label === 'Services' ? (
+                  <li
+                    key={item.label}
+                    className="navbar__item navbar__item--dropdown"
+                    onMouseEnter={() => setServicesOpen(true)}
+                    onMouseLeave={() => setServicesOpen(false)}
+                  >
+                    <NavLink
+                      href={item.href}
+                      className={`navbar__link navbar__link--trigger ${isHome && activeSection === 'services' ? 'navbar__link--active' : ''}`}
+                      onClick={(e) => {
+                        if (window.innerWidth <= 900) {
+                          e.preventDefault();
+                          setServicesOpen((v) => !v);
+                        } else {
+                          setMenuOpen(false);
+                        }
+                      }}
+                    >
+                      {item.label}
+                      <span className="navbar__link-caret" aria-hidden><IconChevronDown /></span>
+                    </NavLink>
+                    <div className={`navbar__dropdown ${servicesOpen ? 'navbar__dropdown--open' : ''}`}>
+                      <div className="navbar__dropdown-inner">
+                        {(serviceCategories || []).map((category) => (
+                          <div key={category.label} className="navbar__dropdown-col">
+                            <div className="navbar__dropdown-title">{category.label}</div>
+                            {category.services.map((service) => (
+                              <NavLink
+                                key={service.name}
+                                href={`/services/${serviceSlug(service.name)}`}
+                                className="navbar__dropdown-link"
+                                onClick={() => { setMenuOpen(false); setServicesOpen(false); }}
+                              >
+                                <span className="navbar__dropdown-icon">
+                                  <ServiceIcon type={service.icon || 'web'} />
+                                </span>
+                                <span className="navbar__dropdown-text">{service.name}</span>
+                              </NavLink>
+                            ))}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </li>
+                ) : (
+                  <li key={item.label}>
+                    <NavLink
+                      href={item.href}
+                      className={`navbar__link ${isNavActive(item, activeSection, pathname) ? 'navbar__link--active' : ''}`}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {item.label}
+                    </NavLink>
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
+          <div className="navbar__search-wrap">
+            <label htmlFor="navbar-search" className="navbar__search-label">
+              <IconSearch className="navbar__search-icon" />
+              <input
+                id="navbar-search"
+                type="search"
+                className="navbar__search-input"
+                placeholder="Search..."
+                autoComplete="off"
+                aria-label="Search"
+              />
+              <span className="navbar__search-kbd">âŒ˜K</span>
+            </label>
+          </div>
+          <div className="navbar__actions">
+            <Button href={contactHref} variant="primary" className="navbar__cta">
+              {cta.primary}
+            </Button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+export default NavBar;

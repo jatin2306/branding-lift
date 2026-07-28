@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { Outfit } from "next/font/google";
-import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
-import GoogleAnalyticsPageView from "@/components/analytics/GoogleAnalyticsPageView";
-import { siteConfig } from "@/config/siteConfig";
+import GoogleAnalytics from "@/lib/analytics/GoogleAnalytics";
+import GoogleAnalyticsPageView from "@/lib/analytics/GoogleAnalyticsPageView";
+import { siteConfig } from "@/lib/config/siteConfig";
 import "./globals.css";
 
 const outfit = Outfit({

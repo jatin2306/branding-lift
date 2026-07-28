@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import SiteShell from '@/components/layout/SiteShell/SiteShell';
-import BlogDetail from '@/components/blog/BlogDetail/BlogDetail';
+import SiteShell from '@/shared/layout/SiteShell/SiteShell';
+import BlogDetail from '@/features/blog/components/BlogDetail/BlogDetail';
 import { getAllBlogSlugs, getBlogBySlug } from '@/config/blogs';
-import { siteConfig } from '@/config/siteConfig';
+import { siteConfig } from '@/lib/config/siteConfig';
 
 type PageProps = {
   params: Promise<{ slug: string }>;

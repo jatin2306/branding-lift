@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
-import SiteShell from '@/components/layout/SiteShell/SiteShell';
-import ContactSection from '@/components/sections/ContactSection/ContactSection';
-import { siteConfig } from '@/config/siteConfig';
+import SiteShell from '@/shared/layout/SiteShell/SiteShell';
+import ContactSection from '@/shared/ui/ContactSection/ContactSection';
+import { siteConfig } from '@/lib/config/siteConfig';
 
 export const metadata: Metadata = {
   title: `Contact Us | ${siteConfig.brand.name}`,

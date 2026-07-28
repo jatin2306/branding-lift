@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
-import SiteShell from '@/components/layout/SiteShell/SiteShell';
-import BlogListPage from '@/components/blog/BlogListPage/BlogListPage';
-import { siteConfig } from '@/config/siteConfig';
+import SiteShell from '@/shared/layout/SiteShell/SiteShell';
+import BlogListPage from '@/features/blog/components/BlogListPage/BlogListPage';
+import { siteConfig } from '@/lib/config/siteConfig';
 
 export const metadata: Metadata = {
   title: `Blog | ${siteConfig.brand.name}`,
