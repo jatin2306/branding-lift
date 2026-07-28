@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import SiteShell from '@/shared/layout/SiteShell/SiteShell';
 import BlogDetail from '@/features/blog/components/BlogDetail/BlogDetail';
-import { getAllBlogSlugs, getBlogBySlug } from '@/config/blogs';
+import { getAllBlogSlugs, getBlogBySlug } from '@/lib/config/blogs';
 import { siteConfig } from '@/lib/config/siteConfig';
 
 type PageProps = {
