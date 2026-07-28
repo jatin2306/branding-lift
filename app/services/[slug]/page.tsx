@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import SiteShell from '@/components/layout/SiteShell/SiteShell';
-import ServiceDetailPage from '@/components/services/ServiceDetailPage/ServiceDetailPage';
+import SiteShell from '@/shared/layout/SiteShell/SiteShell';
+import ServiceDetailPage from '@/features/services/components/ServiceDetailPage/ServiceDetailPage';
 import {
   getAllServiceSlugs,
   getServiceWithCategory,
   siteConfig,
-} from '@/config/siteConfig';
+} from '@/lib/config/siteConfig';
 
 type PageProps = {
   params: Promise<{ slug: string }>;
