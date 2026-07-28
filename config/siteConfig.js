@@ -29,13 +29,59 @@ export const siteConfig = {
     hero: 'Contact now',
   },
   hero: {
+    // Old fields — kept in case other components still use these
     title: 'Amazing & creative brand agency',
-    subtitle: 'We are a creative agency specializing in brand strategy, design, and digital that lifts your business.',
+    subtitle: 'We combine creativity, technology and data-driven strategies to help businesses build a strong digital presence and achieve measurable growth.',
     tags: ['Brand Strategy', 'Design', 'Digital'],
     images: [
       '/slider/hero.png',
     ],
     carouselIntervalMs: 3000,
+
+    // New fields required by HeroSection.js
+    eyebrow: 'STRATEGY. TECHNOLOGY. GROWTH.',
+    titleLine1: 'Digital Solutions',
+    titleHighlight: 'That Grow',
+    titleLine2: 'Your Business',
+    features: [
+      { label: 'Web & App Development', icon: 'web' },
+      { label: 'SEO & Digital Marketing', icon: 'seo' },
+      { label: 'Social Media Marketing', icon: 'marketing' },
+      { label: 'AI Automation & Integration', icon: 'ai' },
+      { label: 'Branding & Design', icon: 'brand' },
+      { label: 'Business Growth', icon: 'orm' },
+    ],
+    dashboard: {
+      laptop: {
+        kicker: 'Performance Overview',
+        titlePlain: 'Grow your ',
+        titleHighlight1: 'brand',
+        titleMid: ' with ',
+        titleHighlight2: 'data',
+        note1: 'Track every campaign,',
+        note2: 'see results in real time.',
+        chartPoints: [10, 25, 18, 32, 28, 45, 38, 52, 48, 60],
+        growthBadge: {
+          value: '+98%',
+          title: 'Growth',
+          label: 'this year',
+        },
+        stats: [
+          { value: '250+', delta: '+12%', label: 'Projects' },
+          { value: '98%', delta: '+5%', label: 'Satisfaction' },
+        ],
+        donut: {
+          value: '98%',
+          label: 'Success Rate',
+        },
+      },
+      phone: {
+        title: 'Client Growth',
+        subtitle: 'Real-time analytics',
+        avatarsCount: 4,
+        clientsLabel: '+250 clients',
+      },
+    },
   },
   whatsapp: {
     number: '+91 9717882400',
