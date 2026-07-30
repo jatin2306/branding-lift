@@ -13,7 +13,7 @@
   gap: var(--space-8);
   align-items: stretch;
   padding: var(--space-8);
-  background: #fff;
+  background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-md);
@@ -108,7 +108,7 @@
 
 .about-block__mini-card {
   padding: var(--space-5);
-  background: #fff;
+  background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
@@ -167,7 +167,7 @@
 .about-block__value-card {
   padding: var(--space-5);
   text-align: center;
-  background: #fff;
+  background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
 }
@@ -203,7 +203,7 @@
   text-align: center;
   gap: var(--space-4);
   padding: var(--space-10);
-  background: #fff;
+  background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-md);

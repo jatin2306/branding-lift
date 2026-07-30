@@ -23,7 +23,7 @@
 
 .btn--primary {
   background-color: var(--color-primary);
-  color: #fff;
+  color: var(--color-bg-card);
   box-shadow: var(--shadow-primary);
 }
 
@@ -34,7 +34,7 @@
 
 .btn--secondary {
   background-color: #2a2a2a;
-  color: #fff;
+  color: var(--color-bg-card);
 }
 
 .btn--secondary:hover {

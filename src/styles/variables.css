@@ -1,0 +1,67 @@
+/* ============================================
+   🌈 GLOBAL COLOR VARIABLES
+   All colors extracted from the entire codebase.
+   ============================================ */
+
+:root {
+  /* ---------- Brand Primary ---------- */
+  --color-primary: #7b3fe4;
+  --color-primary-dark: #6b4ad8;
+  --color-primary-light: #a78bfa;
+  --color-primary-soft: rgba(123, 63, 228, 0.08);
+
+  /* ---------- Accent Colors ---------- */
+  --color-accent-blue: #4f6bf0;
+  --color-accent-purple: #8b4ff0;
+  --color-accent-dark: #5a4be0;
+
+  /* ---------- Text Colors ---------- */
+  --color-text: #1a1330;
+  --color-text-secondary: #1f2937;
+  --color-text-light: #4b4560;
+  --color-text-muted: #6b7280;
+  --color-text-light-2: #8a839c;
+  --color-text-inverse: #ffffff;
+
+  /* ---------- Background Colors ---------- */
+  --color-bg: #f8faff;
+  --color-bg-card: #ffffff;
+  --color-bg-soft: #f4f2fb;
+  --color-bg-muted: #f1f5f9;
+  --color-bg-light: #f7f5fc;
+  --color-bg-light-purple: #ece7fa;
+
+  /* ---------- Border Colors ---------- */
+  --color-border: #eef2f6;
+  --color-border-light: #e2e8f0;
+  --color-border-purple-light: #c3b3ef;
+  --color-border-purple: rgba(124, 92, 255, 0.12);
+
+  /* ---------- Semantic / Status ---------- */
+  --color-success: #2fb87f;
+  --color-success-bg: #ecfdf5;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+
+  /* ---------- Gradients ---------- */
+  --gradient-bg: linear-gradient(135deg, #f7f5fc 0%, #ece7fa 100%);
+  --gradient-primary: linear-gradient(135deg, #7b3fe4 0%, #4f6bf0 100%);
+  --gradient-secondary: linear-gradient(135deg, #8b4ff0, #5a4be0);
+  --gradient-cta: linear-gradient(135deg, rgba(124, 92, 255, 0.04), rgba(124, 92, 255, 0.01));
+
+  /* ---------- Shadows ---------- */
+  --shadow-sm: 0 2px 12px rgba(124, 107, 158, 0.08);
+  --shadow-md: 0 4px 24px rgba(124, 107, 158, 0.12);
+  --shadow-lg: 0 24px 60px rgba(124, 107, 158, 0.18);
+  --shadow-primary: 0 8px 22px -4px rgba(123, 63, 228, 0.5);
+  --shadow-primary-2: 0 14px 30px -5px rgba(123, 63, 228, 0.65);
+  --shadow-laptop: -10px 15px 40px rgba(20, 10, 50, 0.15);
+  --shadow-phone: -15px 20px 30px rgba(20, 10, 50, 0.5);
+
+  /* ---------- RGB Versions (for rgba() usage) ---------- */
+  --color-primary-rgb: 123, 63, 228;
+  --color-text-rgb: 26, 19, 48;
+  --color-bg-rgb: 248, 250, 255;
+  --color-bg-card-rgb: 255, 255, 255;
+  --color-accent-blue-rgb: 79, 107, 240;
+}
