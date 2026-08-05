@@ -48,7 +48,12 @@ export default function HomePage() {
       <Header />
       <main>
         <HeroSection />
-        <ContentSection id="about" headingAlign="center">
+        <ContentSection
+          id="about"
+          title="Strategy, design & digital that lifts your brand"
+          subtitle="We help you stand out with a clear identity, strong presence, and campaigns that convert."
+          headingAlign="center"
+        >
           <AboutBlock />
         </ContentSection>
         <ContentSection

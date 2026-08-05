@@ -1,4 +1,6 @@
+@import '../src/styles/variables.css';
 @import "tailwindcss";
+
 
 :root {
   /* Colors – light lavender theme */

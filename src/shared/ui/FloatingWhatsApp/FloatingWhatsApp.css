@@ -9,7 +9,7 @@
   width: 56px;
   height: 56px;
   background-color: #25d366;
-  color: #fff;
+  color: var(--color-bg-card);
   border-radius: var(--radius-full);
   box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45);
   transition: transform var(--transition), box-shadow var(--transition-smooth);

@@ -58,7 +58,7 @@
 
 .contact-block__link:hover .contact-block__icon-wrap {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-bg-card);
 }
 
 .contact-block__icon-wrap {
@@ -140,7 +140,7 @@
 
 .contact-block__social-link:hover {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-bg-card);
   transform: translateY(-1px);
 }
 
