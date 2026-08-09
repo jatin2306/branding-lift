@@ -18,7 +18,7 @@ const socialIcons = {
   instagram: IconInstagram,
 };
 
-const WEB3FORMS_ACCESS_KEY = '01e6e60a-6e0e-4f96-b586-668c3d1303b3';
+const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
 
 function ContactForm() {
   const { contact, social = [] } = siteConfig;
@@ -80,7 +80,7 @@ function ContactForm() {
         <ul className="contact-block__list">
           {contact.email ? (
             <li>
-              <a href={'mailto:' + contact.email} className="contact-block__link">
+              <a href={"mailto:" + contact.email} className="contact-block__link">
                 <span className="contact-block__icon-wrap" aria-hidden="true">
                   <IconEmail className="contact-block__icon" />
                 </span>
@@ -94,7 +94,7 @@ function ContactForm() {
           {contact.phone2 ? (
             <li>
               <a
-                href={'tel:' + contact.phone2.replace(/\s/g, '')}
+                href={"tel:" + contact.phone2.replace(/\s/g, "")}
                 className="contact-block__link"
               >
                 <span className="contact-block__icon-wrap" aria-hidden="true">
@@ -102,7 +102,7 @@ function ContactForm() {
                 </span>
                 <span className="contact-block__link-text">
                   <span className="contact-block__link-label">
-                    {contact.phone2Label ? 'Phone (' + contact.phone2Label + ')' : 'Phone'}
+                    {contact.phone2Label ? "Phone (" + contact.phone2Label + ")" : "Phone"}
                   </span>
                   <span className="contact-block__link-value">{contact.phone2}</span>
                 </span>
@@ -191,12 +191,12 @@ function ContactForm() {
           />
         </div>
 
-        {status === 'success' ? (
+        {status === "success" ? (
           <p className="contact-form__status contact-form__status--success">
             Thanks! Your message has been sent. We will get back to you soon.
           </p>
         ) : null}
-        {status === 'error' ? (
+        {status === "error" ? (
           <p className="contact-form__status contact-form__status--error">
             {errorMsg}
           </p>
@@ -206,9 +206,9 @@ function ContactForm() {
           type="submit"
           variant="primary"
           className="contact-form__submit"
-          disabled={status === 'loading'}
+          disabled={status === "loading"}
         >
-          {status === 'loading' ? 'Sending...' : 'Send message'}
+          {status === "loading" ? "Sending..." : "Send message"}
         </Button>
       </form>
     </div>
