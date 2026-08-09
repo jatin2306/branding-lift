@@ -48,9 +48,14 @@ export default function HomePage() {
       <Header />
       <main>
         <HeroSection />
-        <ContentSection id="about" headingAlign="center">
-          <AboutBlock />
-        </ContentSection>
+        <ContentSection
+  id="about"
+  title="About BrandingLift"
+  subtitle="Empowering businesses through technology, creativity, and digital growth."
+  headingAlign="center"
+>
+  <AboutBlock />
+</ContentSection>
         <ContentSection
           id="services"
           title="What we do"
