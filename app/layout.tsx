@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { Outfit } from "next/font/google";
 import GoogleAnalytics from "@/lib/analytics/GoogleAnalytics";
 import GoogleAnalyticsPageView from "@/lib/analytics/GoogleAnalyticsPageView";
+import WidgetScript from "@/lib/widget/WidgetScript";
 import { siteConfig } from "@/lib/config/siteConfig";
 import "./globals.css";
 
@@ -32,6 +33,7 @@ export default function RootLayout({
           <GoogleAnalyticsPageView />
         </Suspense>
         {children}
+        <WidgetScript />
       </body>
     </html>
   );
