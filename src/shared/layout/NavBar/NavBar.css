@@ -146,15 +146,17 @@
 }
 
 .navbar__links-wrap {
-  flex: 1;
+  flex: 0 1 auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  min-width: 0;
 }
-
 .navbar__links {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.35rem;
+  min-width: 0;
+  white-space: nowrap;
 }
 
 .navbar__link {
@@ -242,8 +244,8 @@
   align-items: center;
   gap: 0.5rem;
   width: 100%;
-  min-width: 190px;
-  max-width: 230px;
+  min-width: 160px;
+  max-width: 190px;
   padding: 0.4rem 0.75rem;
   background: #f7f5fc;
   border: 1px solid #ece7fa;
@@ -286,6 +288,36 @@
   color: #9089a3;
   background: rgba(123, 63, 228, 0.08);
   border-radius: 4px;
+}
+
+/* ============================================
+   LIFTBOT NAV BUTTON
+   ============================================ */
+
+.navbar__liftbot-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #7b3fe4;
+  background: rgba(123, 63, 228, 0.08);
+  border: 1.5px solid rgba(123, 63, 228, 0.25);
+  border-radius: 9999px;
+  white-space: nowrap;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.navbar__liftbot-btn:hover {
+  background: rgba(123, 63, 228, 0.14);
+  border-color: #7b3fe4;
+  color: #5a2fc2;
+  transform: translateY(-1px);
+}
+
+.navbar__liftbot-icon {
+  flex-shrink: 0;
 }
 
 /* ============================================
@@ -703,10 +735,18 @@
     border-top: 1px solid var(--color-border-soft);
     width: 100%;
     max-width: 280px;
+    flex-direction: column;
     justify-content: center;
   }
 
   .navbar__cta {
+    width: 100%;
+    justify-content: center;
+    padding: var(--space-4) var(--space-6);
+    font-size: var(--text-base);
+  }
+
+  .navbar__liftbot-btn {
     width: 100%;
     justify-content: center;
     padding: var(--space-4) var(--space-6);

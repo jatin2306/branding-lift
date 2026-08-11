@@ -205,6 +205,29 @@
   padding: var(--space-3) var(--space-8);
 }
 
+.contact-form__status {
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+.contact-form__status--success {
+  background: rgba(47, 184, 127, 0.1);
+  color: #1e8f5f;
+}
+
+.contact-form__status--error {
+  background: rgba(220, 38, 38, 0.08);
+  color: #dc2626;
+}
+
+.contact-form__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 @media (max-width: 900px) {
   .contact-block {
     grid-template-columns: 1fr;

@@ -19,6 +19,7 @@ export const siteConfig = {
   nav: [
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
+    { label: 'Products', href: '/liftbot' }, 
     { label: 'Services', href: '#services' },
     { label: 'Blogs', href: '#blogs' },
     { label: 'Contact', href: '/contact' },
@@ -247,6 +248,95 @@ export const siteConfig = {
       },
       image: '/images/about-team.jpg',
       imageAlt: 'The BrandingLift team collaborating on digital strategy',
+    },
+  },
+
+  // ============ NEW: LiftBot marketing page content ============
+  liftbot: {
+    nav: { label: 'LiftBot', href: '/liftbot' },
+
+    hero: {
+      badge: 'AI SALES & SUPPORT AGENT',
+      headingPlain: 'Meet ',
+      headingHighlight: 'LiftBot',
+      subtitle: 'Your 24/7 AI Sales & Customer Support Agent. LiftBot engages your website visitors, answers their questions, qualifies leads, books appointments, and escalates to your team — around the clock.',
+      ctaPrimary: { label: 'Get LiftBot for My Business', href: '#liftbot-query' },
+      ctaSecondary: { label: 'See How It Works', href: '#liftbot-how-it-works' },
+      stats: [
+        { value: '10x', label: 'Faster Responses' },
+        { value: '3x', label: 'More Conversions' },
+        { value: '24/7', label: 'Always Available' },
+        { value: '90%', label: 'Automation Rate' },
+      ],
+    },
+
+    problem: {
+      badge: 'THE PROBLEM',
+      heading: 'Why Businesses Lose Customers',
+      subtitle: "Today's customers expect instant answers. When they don't get them, they leave — and often never come back.",
+      points: [
+        { icon: 'clock', title: 'No Instant Response', text: "Visitors don't get answers in real-time." },
+        { icon: 'moon', title: 'After-Hours Enquiries', text: 'Customers visit your website outside business hours.' },
+        { icon: 'people', title: 'High Manual Workload', text: 'Teams spend too much time on repetitive questions.' },
+        { icon: 'funnel', title: 'Missed Opportunities', text: 'Leads slip through the cracks and revenues drop.' },
+        { icon: 'sad', title: 'Poor Customer Experience', text: 'Slow responses lead to unhappy visitors and lost trust.' },
+      ],
+      stats: [
+        { value: '79%', label: 'of customers prefer live chat because of the immediacy it offers.' },
+        { value: '53%', label: 'of visitors leave a website if they do not get quick answers.' },
+        { value: '$2.6T', label: 'lost in sales every year due to poor customer service.' },
+      ],
+    },
+
+    features: {
+      badge: 'WHAT LIFTBOT DOES',
+      heading: 'Powerful AI. Real Business Impact.',
+      subtitle: 'LiftBot is built on advanced AI models that understand context, learn from your data, and deliver human-like conversations that drive results.',
+      items: [
+        { icon: 'chat', title: 'Smart Conversations', text: 'Human-like conversations that understand and respond instantly.' },
+        { icon: 'filter', title: 'Lead Qualification', text: 'Qualifies visitors, captures key information and delivers hot leads.' },
+        { icon: 'calendar', title: 'Appointment Booking', text: 'Books meetings and appointments directly on your calendar.' },
+        { icon: 'handoff', title: 'Human Handoff', text: 'Seamlessly transfers complex conversations to your team.' },
+        { icon: 'globe', title: 'Multi-Language Support', text: 'Communicates with customers in their preferred language.' },
+        { icon: 'shield', title: 'Enterprise-Grade Security', text: 'Your data is protected with industry-leading security standards.' },
+        { icon: 'brain', title: 'Continuous Learning', text: 'Learns from new conversations to improve over time.' },
+        { icon: 'plug', title: 'Seamless Integrations', text: 'Connects with your CRM, email, calendar and other tools.' },
+      ],
+    },
+
+    howItWorks: {
+      badge: 'GETTING STARTED',
+      heading: 'How LiftBot Works',
+      subtitle: 'Get started in minutes. Let LiftBot handle the conversations so you can focus on growing your business.',
+      steps: [
+        { step: '01', title: 'Create Your Account', text: 'Sign up in less than a minute and set up your LiftBot account.' },
+        { step: '02', title: 'Train LiftBot', text: 'Add your website, upload documents, enter FAQs and business information.' },
+        { step: '03', title: 'Install on Your Website', text: 'Copy and paste a simple code snippet to add LiftBot to your website.' },
+        { step: '04', title: 'LiftBot Engages Visitors', text: 'It answers questions, provides information, and qualifies potential customers.' },
+        { step: '05', title: 'You Get Qualified Leads', text: 'Leads are captured, organized, and sent to your dashboard and email in real time.' },
+      ],
+    },
+
+    growth: {
+      badge: 'SCALE WITH CONFIDENCE',
+      heading: 'Built to Grow With Your Business',
+      subtitle: "LiftBot adapts to your business needs today and scales with you tomorrow — so you're never limited by your tools.",
+      stats: [
+        { value: '100K+', label: 'Conversations handled seamlessly' },
+        { value: '24/7', label: 'Availability, always on' },
+        { value: '99.9%', label: 'Uptime, built for reliability' },
+        { value: 'Future-Ready', label: 'Regular updates and new features' },
+      ],
+    },
+
+    cta: {
+      heading: 'Take the First Step Towards Growth',
+      subtitle: "LiftBot is your 24/7 AI sales agent — ready to help you attract more leads, close more deals, and grow your business effortlessly.",
+    },
+
+    queryForm: {
+      heading: 'Get LiftBot for Your Business',
+      subtitle: "Tell us a bit about your business and we'll show you how LiftBot can help.",
     },
   },
 
