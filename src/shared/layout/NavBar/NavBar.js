@@ -18,6 +18,7 @@ const CATEGORY_ICON_MAP = {
   Advertising: 'google',
 };
 
+
 function categorySlug(label) {
   return label
     .toLowerCase()
@@ -43,7 +44,7 @@ function NavBar({ scrolled: headerScrolled = false }) {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  const { nav, cta, serviceCategories } = siteConfig;
+  const { nav, cta, serviceCategories, liftbot } = siteConfig;
 
   useEffect(() => {
     if (menuOpen) document.body.style.overflow = 'hidden';
@@ -77,6 +78,8 @@ function NavBar({ scrolled: headerScrolled = false }) {
 
   const logoHref = isHome ? '#home' : '/';
   const contactHref = cta.primaryHref || '/contact';
+  const liftbotHref = liftbot?.nav?.href || '/liftbot';
+  const liftbotLabel = liftbot?.nav?.label || 'LiftBot';
 
   const isScrolled = scrolled || headerScrolled;
 
@@ -219,6 +222,14 @@ function NavBar({ scrolled: headerScrolled = false }) {
             </label>
           </div>
           <div className="navbar__actions">
+            <NavLink
+              href={liftbotHref}
+              className="navbar__liftbot-btn"
+              onClick={() => setMenuOpen(false)}
+            >
+              
+              {liftbotLabel}
+            </NavLink>
             <Button href={contactHref} variant="primary" className="navbar__cta">
               {cta.primary}
             </Button>
