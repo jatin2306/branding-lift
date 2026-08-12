@@ -3,7 +3,7 @@
 import { useState, type CSSProperties } from 'react';
 import { siteConfig, serviceSlug } from '@/lib/config/siteConfig';
 import Header from '@/shared/layout/Header/Header';
-import HeroSection from '@/features/hero/components/HeroSection/HeroSection';
+import HeroCarousel from '@/features/home/components/HeroCarousel/HeroCarousel';
 import ContentSection from '@/shared/ui/ContentSection/ContentSection';
 import AboutBlock from '@/features/about/components/AboutBlock/AboutBlock';
 import ContactSection from '@/features/contact/components/ContactSection/ContactSection';
@@ -47,7 +47,7 @@ export default function HomePage() {
     <div className="app">
       <Header />
       <main>
-        <HeroSection />
+        <HeroCarousel />
         <ContentSection
           id="about"
           title="Strategy, design & digital that lifts your brand"
