@@ -19,7 +19,7 @@ export const siteConfig = {
   nav: [
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
-    { label: 'Products', href: '/liftbot' }, 
+    { label: 'Products', href: '/liftbot' },
     { label: 'Services', href: '#services' },
     { label: 'Blogs', href: '#blogs' },
     { label: 'Contact', href: '/contact' },
@@ -260,8 +260,9 @@ export const siteConfig = {
       headingPlain: 'Meet ',
       headingHighlight: 'LiftBot',
       subtitle: 'Your 24/7 AI Sales & Customer Support Agent. LiftBot engages your website visitors, answers their questions, qualifies leads, books appointments, and escalates to your team — around the clock.',
-      ctaPrimary: { label: 'Get LiftBot for My Business', href: '#liftbot-query' },
+      ctaPrimary: { label: 'Get LiftBot for My Business', href: 'https://liftbot.brandinglift.com/dashboard/', external: true },
       ctaSecondary: { label: 'See How It Works', href: '#liftbot-how-it-works' },
+      ctaTertiary: { label: 'Contact Us', href: '#liftbot-query' },
       stats: [
         { value: '10x', label: 'Faster Responses' },
         { value: '3x', label: 'More Conversions' },

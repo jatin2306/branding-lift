@@ -49,6 +49,8 @@ export default function LiftBotPage() {
   const { liftbot } = siteConfig;
   const { hero, problem, features, howItWorks, growth, cta, queryForm } = liftbot;
 
+  const primaryExternal = hero.ctaPrimary.external;
+
   return (
     <div className="app">
       <Header />
@@ -64,11 +66,20 @@ export default function LiftBotPage() {
             <p className="lb-hero__subtitle">{hero.subtitle}</p>
 
             <div className="lb-hero__cta-row">
-              <a href={hero.ctaPrimary.href} className="lb-btn lb-btn--primary">
-                {hero.ctaPrimary.label}<ArrowIcon />
-              </a>
+              {primaryExternal ? (
+                <a href={hero.ctaPrimary.href} className="lb-btn lb-btn--primary" target="_blank" rel="noopener noreferrer">
+                  {hero.ctaPrimary.label}<ArrowIcon />
+                </a>
+              ) : (
+                <a href={hero.ctaPrimary.href} className="lb-btn lb-btn--primary">
+                  {hero.ctaPrimary.label}<ArrowIcon />
+                </a>
+              )}
               <a href={hero.ctaSecondary.href} className="lb-btn lb-btn--ghost">
                 {hero.ctaSecondary.label}
+              </a>
+              <a href={hero.ctaTertiary.href} className="lb-btn lb-btn--ghost">
+                {hero.ctaTertiary.label}
               </a>
             </div>
 
