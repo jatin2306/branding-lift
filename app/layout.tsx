@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import { Outfit } from "next/font/google";
 import GoogleAnalytics from "@/lib/analytics/GoogleAnalytics";
 import GoogleAnalyticsPageView from "@/lib/analytics/GoogleAnalyticsPageView";
-import WidgetScript from "@/lib/widget/WidgetScript";
+import LiftBotWidget from "@/lib/widget/LiftBotWidget";
 import { siteConfig } from "@/lib/config/siteConfig";
 import "./globals.css";
 
@@ -33,7 +33,7 @@ export default function RootLayout({
           <GoogleAnalyticsPageView />
         </Suspense>
         {children}
-        <WidgetScript />
+        <LiftBotWidget />
       </body>
     </html>
   );
