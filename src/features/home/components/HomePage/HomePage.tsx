@@ -14,6 +14,7 @@ import FloatingWhatsApp from '@/shared/ui/FloatingWhatsApp/FloatingWhatsApp';
 import RemoteImage from '@/shared/ui/RemoteImage/RemoteImage';
 import { ServiceIcon, IconArrowRight } from '@/shared/ui/Icons/Icons';
 import './home.css';
+import LiftBotHomeSection from '@/features/home/components/LiftBotHomeSection/LiftBotHomeSection';
 
 const categoryAccent: Record<string, string> = {
   Development: '#2563eb',
@@ -48,6 +49,7 @@ export default function HomePage() {
       <Header />
       <main>
         <HeroCarousel />
+        <LiftBotHomeSection />
         <ContentSection
           id="about"
           title="Strategy, design & digital that lifts your brand"
