@@ -256,19 +256,71 @@ export const siteConfig = {
     nav: { label: 'LiftBot', href: '/liftbot' },
 
     hero: {
-      badge: 'AI SALES & SUPPORT AGENT',
-      headingPlain: 'Meet ',
-      headingHighlight: 'LiftBot',
-      subtitle: 'Your 24/7 AI Sales & Customer Support Agent. LiftBot engages your website visitors, answers their questions, qualifies leads, books appointments, and escalates to your team — around the clock.',
-      ctaPrimary: { label: 'Get LiftBot for My Business', href: 'https://liftbot.brandinglift.com/dashboard/', external: true },
-      ctaSecondary: { label: 'See How It Works', href: '#liftbot-how-it-works' },
-      ctaTertiary: { label: 'Contact Us', href: '#liftbot-query' },
+      badge: 'POWERING THE NEXT GENERATION OF BUSINESS',
+      headingPlain: 'Your Business. Your Team. ',
+      headingHighlight: 'Now With AI.',
+      subtitle: 'Meet LiftBot — an AI employee that helps businesses respond to customers, qualify leads, automate conversations, and work alongside your team around the clock.',
+      ctaPrimary: { label: 'Meet LiftBot', href: 'https://liftbot.brandinglift.com/dashboard/', external: true },
+      ctaSecondary: { label: 'Join Early Access', href: '#liftbot-query', external: false },
+      smallText: 'A new AI product by Brandinglift.',
       stats: [
         { value: '10x', label: 'Faster Responses' },
         { value: '3x', label: 'More Conversions' },
         { value: '24/7', label: 'Always Available' },
         { value: '90%', label: 'Automation Rate' },
       ],
+    },
+
+    // ============ Homepage hero-carousel slide 2 — "AI Employee" content per brief ============
+    heroPreview: {
+      eyebrow: 'INTRODUCING LIFTBOT',
+      titleLine1: 'Meet Your',
+      titleHighlight: 'AI Employee.',
+      titleLine2: '',
+      subtitle: 'An AI-powered employee designed to help your business handle customer conversations, capture leads, automate repetitive work, and stay responsive 24/7.',
+      ctaPrimary: { label: 'Explore LiftBot', href: '/liftbot', external: false },
+      ctaSecondary: { label: 'Get Early Access', href: '/liftbot#liftbot-query', external: false },
+      supportingText: 'Built by Brandinglift for modern businesses.',
+      tags: ['AI Employees', 'Business Automation', 'Customer Engagement'],
+      badges: [
+        { position: 'tl', label: 'Instant Replies', icon: 'chat' },
+        { position: 'tr', label: 'Seamless Integration', icon: 'rocket' },
+        { position: 'bl', label: '24/7 Availability', icon: 'clock' },
+        { position: 'br', label: 'Qualified Leads', icon: 'target' },
+      ],
+      dashboard: {
+        laptop: {
+          kicker: 'AI Performance',
+          titlePlain: 'Automate your ',
+          titleHighlight1: 'support',
+          titleMid: ' with ',
+          titleHighlight2: 'AI',
+          note1: 'Handle every conversation,',
+          note2: 'convert visitors into leads.',
+          chartPoints: [8, 18, 15, 30, 26, 42, 40, 55, 50, 65],
+          growthBadge: {
+            value: '+90%',
+            title: 'Automation',
+            label: 'rate',
+          },
+          stats: [
+            { value: '10x', delta: 'faster', label: 'Response Time' },
+            { value: '24/7', delta: 'always on', label: 'Availability' },
+          ],
+          donut: {
+            value: '90%',
+            label: 'Automation Rate',
+          },
+        },
+        phone: {
+          title: 'LiftBot Activity',
+          subtitle: 'Live conversations',
+          avatarsCount: 4,
+          clientsLabel: '+500 leads',
+          donutValue: '94%',
+          donutLabel: 'Resolution Rate',
+        },
+      },
     },
 
     problem: {
@@ -338,6 +390,26 @@ export const siteConfig = {
     queryForm: {
       heading: 'Get LiftBot for Your Business',
       subtitle: "Tell us a bit about your business and we'll show you how LiftBot can help.",
+    },
+
+    // ============ NEW: Homepage "Meet LiftBot" intro section (below hero) ============
+    homeSection: {
+      badge: 'A New Way to Work With AI',
+      heading: 'Meet LiftBot — Your AI Employee',
+      intro: [
+        "Businesses shouldn't have to choose between great customer service and an overloaded team. LiftBot helps businesses handle repetitive customer conversations, answer questions, capture enquiries, qualify leads, and stay available beyond traditional working hours.",
+        "It's not just another chatbot. It's an AI employee configured around your business, your knowledge, your brand, and your workflows.",
+      ],
+      subheading: 'What LiftBot can help with',
+      items: [
+        { icon: 'chat', title: 'Customer Conversations', text: 'Respond to common customer enquiries with AI-powered conversations.' },
+        { icon: 'filter', title: 'Lead Qualification', text: 'Collect relevant information and help your sales team identify potential opportunities.' },
+        { icon: 'clock', title: '24/7 Availability', text: 'Give customers a way to engage with your business outside normal working hours.' },
+        { icon: 'book', title: 'Business Knowledge', text: 'Configure your AI employee around your products, services, FAQs, policies, and approved information.' },
+        { icon: 'handoff', title: 'Human Handoff', text: 'Bring your team into conversations when human expertise is needed.' },
+      ],
+      cta: { label: 'Explore LiftBot', href: '/liftbot' },
+      bottomTag: 'AI Employees for Modern Businesses',
     },
   },
 

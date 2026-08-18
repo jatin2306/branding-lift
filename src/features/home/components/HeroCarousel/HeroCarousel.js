@@ -12,36 +12,35 @@ function LiftBotSlide() {
 
       <div className="hc-liftbot__container">
         <div className="hc-liftbot__left">
-          <span className="hc-liftbot__badge">AI SALES &amp; SUPPORT AGENT</span>
+          <span className="hc-liftbot__badge">INTRODUCING LIFTBOT</span>
           <h2 className="hc-liftbot__title">
-            Meet <span className="hc-liftbot__title-highlight">LiftBot</span>
+            Meet Your <span className="hc-liftbot__title-highlight">AI Employee.</span>
           </h2>
           <p className="hc-liftbot__subtitle">
-            Your 24/7 AI Sales &amp; Support Agent. It answers visitors, qualifies leads,
-            and books appointments — so you never miss an opportunity.
+            An AI-powered employee designed to help your business handle customer
+            conversations, capture leads, automate repetitive work, and stay responsive 24/7.
           </p>
 
-          <a href="/liftbot" className="hc-liftbot__cta">
-            Explore LiftBot
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
+          <div className="hc-liftbot__cta-row">
+            <a href="/liftbot" className="hc-liftbot__cta">
+              Explore LiftBot
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+            <a href="/liftbot#liftbot-query" className="hc-liftbot__cta hc-liftbot__cta--secondary">
+              Get Early Access
+            </a>
+          </div>
 
-          <div className="hc-liftbot__stats">
-            <div className="hc-liftbot__stat">
-              <span>24/7</span>
-              <p>Always On</p>
-            </div>
-            <div className="hc-liftbot__stat">
-              <span>10x</span>
-              <p>Faster Replies</p>
-            </div>
-            <div className="hc-liftbot__stat">
-              <span>90%</span>
-              <p>Automated</p>
-            </div>
+          <p className="hc-liftbot__supporting">Built by Brandinglift for modern businesses.</p>
+          <div className="hc-liftbot__tags">
+            <span>AI Employees</span>
+            <span className="hc-liftbot__tag-sep">•</span>
+            <span>Business Automation</span>
+            <span className="hc-liftbot__tag-sep">•</span>
+            <span>Customer Engagement</span>
           </div>
         </div>
 

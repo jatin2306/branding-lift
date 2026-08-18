@@ -398,7 +398,12 @@
   font-size: 14px;
   color: #7a7490;
 }
-
+.lb-hero__small-text {
+  margin: 0 0 32px;
+  font-size: 13px;
+  font-style: italic;
+  color: #9089a3;
+}
 /* ---------- RESPONSIVE ---------- */
 
 @media (max-width: 1024px) {

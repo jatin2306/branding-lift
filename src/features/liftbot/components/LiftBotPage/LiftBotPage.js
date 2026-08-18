@@ -78,10 +78,11 @@ export default function LiftBotPage() {
               <a href={hero.ctaSecondary.href} className="lb-btn lb-btn--ghost">
                 {hero.ctaSecondary.label}
               </a>
-              <a href={hero.ctaTertiary.href} className="lb-btn lb-btn--ghost">
-                {hero.ctaTertiary.label}
-              </a>
             </div>
+
+            {hero.smallText ? (
+              <p className="lb-hero__small-text">{hero.smallText}</p>
+            ) : null}
 
             <div className="lb-hero__stats">
               {hero.stats.map((s) => (
