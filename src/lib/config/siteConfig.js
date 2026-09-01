@@ -260,7 +260,7 @@ export const siteConfig = {
       headingPlain: 'Your Business. Your Team. ',
       headingHighlight: 'Now With AI.',
       subtitle: 'Meet LiftBot — an AI employee that helps businesses respond to customers, qualify leads, automate conversations, and work alongside your team around the clock.',
-      ctaPrimary: { label: 'Meet LiftBot', href: 'https://liftbot.brandinglift.com/dashboard/', external: true },
+      ctaPrimary: { label: 'Meet LiftBot', href: 'https://liftbot.app/dashboard/', external: true },
       ctaSecondary: { label: 'Join Early Access', href: '#liftbot-query', external: false },
       smallText: 'A new AI product by Brandinglift.',
       stats: [
