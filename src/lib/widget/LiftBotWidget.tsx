@@ -10,9 +10,9 @@ export default function LiftBotWidget() {
 
     const script = document.createElement('script');
     script.id = WIDGET_SCRIPT_ID;
-    script.src = 'https://liftbot.brandinglift.com/static/widget.js';
+    script.src = 'https://liftbot.app/static/widget.js';
     script.dataset.employeeToken = 'A49r-HvOSi_wfdCtL9LKdlAzZYv01xgv';
-    script.dataset.apiBase = 'https://liftbot.brandinglift.com/api/widget';
+    script.dataset.apiBase = 'https://liftbot.app/api/widget';
     script.defer = true;
     document.body.appendChild(script);
   }, []);
