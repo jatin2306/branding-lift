@@ -19,7 +19,7 @@ export const siteConfig = {
   nav: [
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
-    { label: 'Products', href: '/liftbot' },
+    { label: 'Products', href: 'https://liftbot.app' },
     { label: 'Services', href: '#services' },
     { label: 'Blogs', href: '#blogs' },
     { label: 'Contact', href: '/contact' },
@@ -253,7 +253,7 @@ export const siteConfig = {
 
   // ============ NEW: LiftBot marketing page content ============
   liftbot: {
-    nav: { label: 'LiftBot', href: '/liftbot' },
+    nav: { label: 'LiftBot', href: 'https://liftbot.app', external: true },
 
     hero: {
       badge: 'POWERING THE NEXT GENERATION OF BUSINESS',
@@ -278,8 +278,8 @@ export const siteConfig = {
       titleHighlight: 'AI Employee.',
       titleLine2: '',
       subtitle: 'An AI-powered employee designed to help your business handle customer conversations, capture leads, automate repetitive work, and stay responsive 24/7.',
-      ctaPrimary: { label: 'Explore LiftBot', href: '/liftbot', external: false },
-      ctaSecondary: { label: 'Get Early Access', href: '/liftbot#liftbot-query', external: false },
+      ctaPrimary: { label: 'Explore LiftBot', href: 'https://liftbot.app', external: true },
+      ctaSecondary: { label: 'Get Early Access', href: 'https://liftbot.app', external: true },
       supportingText: 'Built by Brandinglift for modern businesses.',
       tags: ['AI Employees', 'Business Automation', 'Customer Engagement'],
       badges: [
@@ -408,7 +408,7 @@ export const siteConfig = {
         { icon: 'book', title: 'Business Knowledge', text: 'Configure your AI employee around your products, services, FAQs, policies, and approved information.' },
         { icon: 'handoff', title: 'Human Handoff', text: 'Bring your team into conversations when human expertise is needed.' },
       ],
-      cta: { label: 'Explore LiftBot', href: '/liftbot' },
+      cta: { label: 'Explore LiftBot', href: 'https://liftbot.app', external: true },
       bottomTag: 'AI Employees for Modern Businesses',
     },
   },
