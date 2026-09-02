@@ -14,8 +14,15 @@ export default function NavLink({
   const pathname = usePathname();
 
   if (isExternalHref(href)) {
+    const isWeb = href.startsWith('http');
     return (
-      <a href={href} className={className} onClick={onClick} {...props}>
+      <a
+        href={href}
+        className={className}
+        onClick={onClick}
+        {...(isWeb ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+        {...props}
+      >
         {children}
       </a>
     );

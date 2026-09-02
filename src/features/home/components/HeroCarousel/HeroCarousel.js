@@ -22,14 +22,14 @@ function LiftBotSlide() {
           </p>
 
           <div className="hc-liftbot__cta-row">
-            <a href="/liftbot" className="hc-liftbot__cta">
+            <a href="https://liftbot.app" className="hc-liftbot__cta" target="_blank" rel="noopener noreferrer">
               Explore LiftBot
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
               </svg>
             </a>
-            <a href="/liftbot#liftbot-query" className="hc-liftbot__cta hc-liftbot__cta--secondary">
+            <a href="https://liftbot.app" className="hc-liftbot__cta hc-liftbot__cta--secondary" target="_blank" rel="noopener noreferrer">
               Get Early Access
             </a>
           </div>
