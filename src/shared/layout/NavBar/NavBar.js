@@ -29,6 +29,7 @@ function categorySlug(label) {
 
 function isNavActive(item, activeSection, pathname) {
   if (item.href === '/contact' && pathname === '/contact') return true;
+  if (item.label === 'Products' && pathname.startsWith('/products')) return true;
   if (item.label === 'Services' && pathname.startsWith('/services')) return true;
   if (item.label === 'Blogs' && pathname.startsWith('/blogs')) return true;
   if (item.href.startsWith('#') && pathname === '/') {
@@ -78,7 +79,7 @@ function NavBar({ scrolled: headerScrolled = false }) {
 
   const logoHref = isHome ? '#home' : '/';
   const contactHref = cta.primaryHref || '/contact';
-  const liftbotHref = liftbot?.nav?.href || '/liftbot';
+  const liftbotHref = liftbot?.nav?.href || '/products';
   const liftbotLabel = liftbot?.nav?.label || 'LiftBot';
 
   const isScrolled = scrolled || headerScrolled;
