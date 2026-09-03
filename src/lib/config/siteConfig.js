@@ -8,7 +8,7 @@ export const siteConfig = {
   },
   contact: {
     email: 'info@brandinglift.com',
-    phone2: '+91 9717882400',
+    phone2: '+91 9217612400',
     phone2Label: 'India',
   },
   social: [
@@ -85,7 +85,7 @@ export const siteConfig = {
     },
   },
   whatsapp: {
-    number: '+91 9717882400',
+    number: '+91 9217612400',
     message: 'Hi, I\'d like to know more about brandinglift.',
   },
 
